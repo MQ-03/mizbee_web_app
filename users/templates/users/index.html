@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="title" content="project">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="Mubarak M">
+
+<title>{% block title %} {% endblock %} </title>
+<link rel="icon" type="image/x-icon" href="{% static 'img/bee.png' %}">
+
+<!-- bootstrap file -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- bootstrap file-->
+
+<!-- main css -->
+
+
+<!-- message here -->
+
+{% if messages %}
+{% for message in messages %}
+
+<script>
+	alert("{{ message }}");
+</script>
+
+{% endfor %}
+{% endif %}
+
+<!--_______________________________________________-->
+
+</head>
+
+<body class="container-fluid img">
+
+<header class="row">
+
+	<!-- navbar-->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<button class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" class="styleheader" href="{% url "users-home" %}">MizBee🐝</a>
+		</div>
+		<div class="collapse navbar-collapse" id="mainNavBar">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="{% url "users-home" %}">Home</a></li>
+			{% if user.is_authenticated %}
+			<li><a href="{% url 'users-profile' %}" class="nav-item nav-link">Profile</a></li>
+			<li><a href="{% url 'download' %}" class="nav-item nav-link">Download</a></li>
+			<li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>
+			{% else %}
+			<li><a href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span>  Log in</a></li>
+			{% endif %}
+		</ul>
+		</div>
+	</div>
+	</nav>
+</header>
+<br/>
+<br>
+<br>
+{% if messages %}
+<div class="alert alert-dismissible" role="alert">
+  {% for message in messages %}
+	<div class="alert alert-{{ message.tags }}">{{ message }}</div>
+  {% endfor %}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	<span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+<div class="col-xs-12">
+	<div class="col-md-6" >
+{% block content %}{% endblock %}</div>
+<div class="col-md-6">
+	<img src="{% static 'img/beebig.png' %}" alt="" style="width:100%"></div>
+</body>
+</html>
