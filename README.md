@@ -1,3 +1,9 @@
+SnapShots of the project.
+
+<img width="1679" alt="Screenshot 2024-05-22 at 8 57 21 PM" src="https://github.com/MQ-03/mizbee_web_app/assets/34377473/a2f6ce94-6056-4272-bbe9-85cf9a2dcab7">
+
+
+
 *** Mizbee Login System ***
 
 * Register – Users can register and create a new profile
