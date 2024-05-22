@@ -1,7 +1,16 @@
 SnapShots of the project.
 
+Home screen
+
 <img width="1679" alt="Screenshot 2024-05-22 at 8 57 21 PM" src="https://github.com/MQ-03/mizbee_web_app/assets/34377473/a2f6ce94-6056-4272-bbe9-85cf9a2dcab7">
 
+Login screen
+
+<img width="1679" alt="Screenshot 2024-05-22 at 8 59 40 PM" src="https://github.com/MQ-03/mizbee_web_app/assets/34377473/60d286cd-d1a3-412c-9c40-5970d4fe99a2">
+
+Profile screen
+
+<img width="1679" alt="Screenshot 2024-05-22 at 9 00 14 PM" src="https://github.com/MQ-03/mizbee_web_app/assets/34377473/14587217-cf3d-4fd6-8d25-dff6ed043806">
 
 
 *** Mizbee Login System ***
