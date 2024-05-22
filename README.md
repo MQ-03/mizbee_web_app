@@ -10,7 +10,7 @@ Login screen
 
 Profile screen
 
-<img width="1679" alt="Screenshot 2024-05-22 at 9 00 14 PM" src="https://github.com/MQ-03/mizbee_web_app/assets/34377473/14587217-cf3d-4fd6-8d25-dff6ed043806">
+
 
 
 *** Mizbee Login System ***
