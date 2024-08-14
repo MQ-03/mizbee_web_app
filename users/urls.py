@@ -6,6 +6,7 @@ urlpatterns = [
     path('', home, name='users-home'),
     path('register/', RegisterView.as_view(), name='users-register'),
     path('profile/', profile, name='users-profile'),
-    path('Users/mubu/mizbee.zip', views.download_file, name='mizbee'),
+    path('/filepath/mizbee.zip', views.download_file, name='mizbee'),
     path('download/', views.download, name ='download'),
+    path('edit_profile/', views.edit_profile, name ='edit_profile'),
 ]

@@ -2,24 +2,23 @@
 {% block title %} Home Page {% endblock title%}
 {% block content %}
     <div class="jumbotron">
-        <h1 class="display-4">Welcome, {{user.first_name.title |default:'You'}} {{user.last_name}}</h1>
+        <h1 class="display-4">Welcome, {{user.first_name |default:'you..!'}}</h1>
         {%if user.is_authenticated%}
         <p class="lead">
-            This is <b> MizBee</b> AI world for access and learn anything in the whole world data within in a secound.
+            This is <b> MizBee AI</b> world for access and learn anything you want in a secound.
         </p>
+        <h4><u>Follow below Steps.</u></h4>
+        <p1><b>1.</b> Please download the <b>mizbee.zip</b> file in the <b>Download</b> page, then <b>Unzip</b> the zip file.</b></p1><br>
+        <p1><b>2.</b> Make a virtual environment using this cmnd <b>python3 -m venv myenv.</b></p1><br>
+        <p1><b>3.</b> Install the libraries from <b>(pip install -r requirement.txt).</b></p1><br>
+        <p1><b>4.</b> Migrate the database tables <b>(python manage.py makemigrations & python manage.py migrate)</b></p1><br>
+        <p1><b>5.</b> Run the python file using <b>python main.py</b>.</p1><br>
+        <p1><b>6.</b> Explore with <b>MizBee AI</b>...!</p1><br>
         {%else%}
         <p class="lead">
             This is <b>user registration and login system</b> for <b>MizBee</b> AI virtual assistant access page. You can download the file in the download page.
-            Please <b>Login</b> to the AI world.
+            Please <b>Login</b> to the <b>MizBee AI</b> world.
         </p>
         {%endif%}
-        <hr class="my-4">
-        <p class="lead">
-            {% if user.is_authenticated %}
-                <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Logout</a>
-            {% else %}
-                <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Sign in</a>
-            {% endif %}
-        </p>
-    </div>
+        </div>
 {% endblock content %}

@@ -83,7 +83,8 @@ class UpdateProfileForm(forms.ModelForm):
     avatar = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-file'}))
     bio = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 5}))
     phone = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-
+    dob = forms.DateField(widget=forms.DateInput(attrs={'class': 'form-control'}))
+    
     class Meta:
         model = Profile
-        fields = ['avatar', 'bio', 'phone']
+        fields = ['avatar', 'bio', 'phone', 'dob']
