@@ -16,7 +16,7 @@
         </div>
     {% endif %}
     <div class="form-content">
-        <form class"row g-3"  method="post" enctype="multipart/form-data">
+        <form class"row g-3" action="{% url 'edit_profile'%}" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-row">
                 <div class="col-md-5" style="border: 1px solid black; margin: 4%; padding:4%; border-radius:20px;">
@@ -27,23 +27,22 @@
                     <br>
                     <br>
                     <div class="form-group">
-                        <label class="small mb-1">Username:</label>
-                            {{ user_form.username }}
-                        <label class="small mb-1">Email:</label>
-                            {{ user_form.email }}
+                        <label class="small mb-1">Username:</label><br>
+                            <b>{{ user.username }}</b><br><br>
+                        <label class="small mb-1">Email:</label><br>
+                            <b>{{ user.email }}</b><br><br>
+                        <label class="small mb-1">Phone:</label><br>
+                            <b>{{ user.profile.phone }}</b><br><br>
+                        <label class="small mb-1">Bio:</label><br>
+                            <b>{{ user.profile.bio }}</b><br><br>
+                        <label class="small mb-1">DOB:</label><br>
+                            <b>{{ user.profile.dob }}</b><br>
                     </div>
                     <div class="form-group">
+                        <hr class="my-4">
                         <a href="{% url 'password_change' %}">Change Password</a>
-                        <hr>
-                        <label class="small mb-1">Change Avatar:</label>
-                        {{ profile_form.avatar }}
                     </div>
-                    <label class="small mb-1">Bio:</label> {{ profile_form.bio }}
-                    <br>
-                    <label class="small mb-1">Phone:</label> {{ profile_form.phone }}
-                    <br><br>
-            <button type="submit" class="btn btn-primary">Save Changes</button>
-            <button type="reset" class="btn btn-primary">Reset</button>
+                    <a href="{% url 'edit_profile' %}">Edit</a>
                 </div>
             </div>
         </form>
