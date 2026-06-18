@@ -39,3 +39,4 @@ $ python manage.py runserver
    
 3. Open a browser and go to http://localhost:8000/
 
+end of the README
